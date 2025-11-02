@@ -5,7 +5,8 @@ var MAX_ENERGY = 70
 
 var playerHealth = MAX_HEALTH
 var playerEnergy = MAX_ENERGY
-var damage = 20
+var playerStrength = 20.0
+var playerSpeed = 100.0
 
 var playerCurrentAttack = false
 var player_chase = true
@@ -35,6 +36,3 @@ var energyBuff: float = 0.0
 var defBuff: float = 0.0
 var critDamageBuff: float = 0.0
 var critChanceBuff: float = 0.0
-
-var addSpeed = 150.0 + speedBuff
-var playerDamage = 100 + strengthBuff

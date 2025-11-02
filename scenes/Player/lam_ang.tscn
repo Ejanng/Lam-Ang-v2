@@ -282,6 +282,7 @@ radius = 21.0
 
 [node name="Lam-Ang" type="CharacterBody2D" groups=["player"]]
 process_mode = 3
+z_index = 9
 scale = Vector2(1.2, 1.2)
 collision_layer = 3
 script = ExtResource("1_67xbk")
@@ -317,10 +318,10 @@ z_index = 5
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -192.0
-offset_top = -108.0
-offset_right = -98.0
-offset_bottom = -92.0
+offset_left = -239.50003
+offset_top = -134.66672
+offset_right = -145.50003
+offset_bottom = -118.66672
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 0
@@ -335,10 +336,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="EnergyBar" type="ProgressBar" parent="."]
 z_index = 5
-offset_left = -192.0
-offset_top = -92.0
-offset_right = -115.0
-offset_bottom = -85.0
+offset_left = -239.50003
+offset_top = -118.66668
+offset_right = -162.50003
+offset_bottom = -111.66668
 theme_override_styles/background = SubResource("StyleBoxFlat_2oh65")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ad0y5")
 show_percentage = false
@@ -347,10 +348,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Sprite2D" type="Sprite2D" parent="EnergyBar"]
 
 [node name="XPBar" type="ProgressBar" parent="."]
-offset_left = -192.0
-offset_top = -85.0
-offset_right = -116.0
-offset_bottom = -81.0
+offset_left = -239.50003
+offset_top = -111.66665
+offset_right = -163.50003
+offset_bottom = -107.66665
 show_percentage = false
 metadata/_edit_use_anchors_ = true
 
@@ -360,14 +361,41 @@ clip_contents = true
 anchors_preset = -1
 anchor_top = -0.009259259
 anchor_bottom = -0.009259259
-offset_left = -192.0
-offset_top = -81.0
-offset_right = -97.0
-offset_bottom = -64.0
+offset_left = -238.6667
+offset_top = -107.666664
+offset_right = -143.6667
+offset_bottom = -90.666664
 theme_override_font_sizes/font_size = 12
 text = "0"
 autowrap_trim_flags = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="DefLabel" type="Label" parent="."]
+offset_left = -239.99998
+offset_top = -85.00001
+offset_right = -199.99998
+offset_bottom = -62.000008
+text = "0"
+
+[node name="AttackLabel" type="Label" parent="."]
+offset_left = -239.99997
+offset_top = -61.666664
+offset_right = -199.99997
+offset_bottom = -38.666664
+text = "0"
+
+[node name="SpeedLabel" type="Label" parent="."]
+offset_left = -240.0
+offset_top = -36.66667
+offset_right = -200.0
+offset_bottom = -13.666672
+text = "0"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -958.0002
+offset_top = -430.6667
+offset_right = -918.0002
+offset_bottom = -407.6667
 
 [node name="attack_cooldown" type="Timer" parent="."]
 wait_time = 3.0
@@ -420,16 +448,16 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -58.0
-offset_top = 80.0
+offset_top = 97.49999
 offset_right = 58.0
-offset_bottom = 100.0
+offset_bottom = 117.50001
 grow_horizontal = 2
 grow_vertical = 0
 
-[connection signal="body_entered" from="hitbox" to="." method="_on_punch_body_entered"]
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
-[connection signal="body_exited" from="hitbox" to="." method="_on_punch_body_exited"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_punch_body_entered"]
 [connection signal="body_exited" from="hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="body_exited" from="hitbox" to="." method="_on_punch_body_exited"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="timeout" from="deal_attack_cooldown" to="." method="_on_deal_attack_cooldown_timeout"]
