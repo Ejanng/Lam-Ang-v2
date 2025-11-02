@@ -7,4 +7,6 @@
 script = ExtResource("1_havko")
 name = "salakot-ng-lakay"
 texture = ExtResource("2_onukp")
+buffDefense = 0.1
+buffHealth = 0.25
 metadata/_custom_type_script = "uid://buqlpcs727fru"

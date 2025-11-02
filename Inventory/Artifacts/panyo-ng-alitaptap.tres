@@ -7,4 +7,6 @@
 script = ExtResource("1_k2gwn")
 name = "panyo-ng-alitaptap"
 texture = ExtResource("2_lfj5m")
+buffSpeed = 0.1
+buffEnergy = 0.2
 metadata/_custom_type_script = "uid://buqlpcs727fru"

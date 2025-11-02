@@ -7,4 +7,6 @@
 script = ExtResource("1_fa6fi")
 name = "mutya-ng-wasay"
 texture = ExtResource("2_dnidq")
+buffDefense = 0.1
+buffCritChance = 0.3
 metadata/_custom_type_script = "uid://buqlpcs727fru"

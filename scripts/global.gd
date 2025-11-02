@@ -37,3 +37,4 @@ var critDamageBuff: float = 0.0
 var critChanceBuff: float = 0.0
 
 var addSpeed = 150.0 + speedBuff
+var playerDamage = 100 + strengthBuff

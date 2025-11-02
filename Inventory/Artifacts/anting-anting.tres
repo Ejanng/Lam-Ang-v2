@@ -7,4 +7,6 @@
 script = ExtResource("1_epdwf")
 name = "anting-anting"
 texture = ExtResource("2_vj0os")
+buffDefense = 0.15
+buffHealth = 0.1
 metadata/_custom_type_script = "uid://buqlpcs727fru"
