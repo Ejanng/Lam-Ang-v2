@@ -123,3 +123,7 @@ func deal_dmg():
 
 func _on_take_dmg_cooldown_timeout() -> void:
 	canTakeDMG = true
+	
+func die():
+	remove_from_group("boss_enemies")
+	queue_free()

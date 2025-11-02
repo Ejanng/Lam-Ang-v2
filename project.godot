@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lam-ang"
-run/main_scene="uid://ba1amiejsq2ch"
+run/main_scene="uid://dsi6vlnusx1tm"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
@@ -28,7 +28,7 @@ runtime/balloon_path="res://dialogue/balloon.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/gamedev_assistant/plugin.cfg")
 
 [input]
 
