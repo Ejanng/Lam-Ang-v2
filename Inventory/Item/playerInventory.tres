@@ -1,9 +1,17 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=20 format=3 uid="uid://dbnujrtlpcy0i"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=28 format=3 uid="uid://dbnujrtlpcy0i"]
 
 [ext_resource type="Script" uid="uid://cgmqv1bern5k7" path="res://Inventory/inventory_slot.gd" id="2_i86kb"]
 [ext_resource type="Resource" uid="uid://rdo2p3vpslq3" path="res://Inventory/Item/lifepot.tres" id="3_0ci43"]
 [ext_resource type="Script" uid="uid://bse7pqi7s2h5k" path="res://Inventory/inventory.gd" id="4_6uptj"]
+[ext_resource type="Resource" uid="uid://bknqhnnfp1dm3" path="res://Inventory/Artifacts/anting-anting.tres" id="4_8nyw4"]
 [ext_resource type="Resource" uid="uid://bcioe3nk7ioki" path="res://Inventory/Artifacts/bato-ng-palos.tres" id="4_gbjkg"]
+[ext_resource type="Resource" uid="uid://rr28qwhelh4x" path="res://Inventory/Artifacts/mutya-ng-alon.tres" id="6_qmcys"]
+[ext_resource type="Resource" uid="uid://bx7ip56df51wv" path="res://Inventory/Artifacts/mutya-ng-ibon.tres" id="7_qbjqa"]
+[ext_resource type="Resource" uid="uid://f4mcme3yrjw2" path="res://Inventory/Artifacts/mutya-ng-buaya.tres" id="8_prgbk"]
+[ext_resource type="Resource" uid="uid://bkbxjp7ceuax2" path="res://Inventory/Artifacts/salakot-ng-lakay.tres" id="8_qmcys"]
+[ext_resource type="Resource" uid="uid://cuifvh1djodvv" path="res://Inventory/Artifacts/mutya-ng-wasay.tres" id="9_wkxil"]
+[ext_resource type="Resource" uid="uid://dtomguk61ix43" path="res://Inventory/Artifacts/mutya-ng-saging.tres" id="10_vntvb"]
+[ext_resource type="Resource" uid="uid://cdsuydkr8u0jx" path="res://Inventory/Artifacts/panyo-ng-alitaptap.tres" id="11_sxg3y"]
 
 [sub_resource type="Resource" id="Resource_i86kb"]
 script = ExtResource("2_i86kb")
@@ -37,39 +45,47 @@ metadata/_custom_type_script = "uid://cgmqv1bern5k7"
 
 [sub_resource type="Resource" id="Resource_6uptj"]
 script = ExtResource("2_i86kb")
+item = ExtResource("4_8nyw4")
 metadata/_custom_type_script = "uid://cgmqv1bern5k7"
 
 [sub_resource type="Resource" id="Resource_q6lvj"]
 script = ExtResource("2_i86kb")
+item = ExtResource("4_gbjkg")
 metadata/_custom_type_script = "uid://cgmqv1bern5k7"
 
 [sub_resource type="Resource" id="Resource_w1tt7"]
 script = ExtResource("2_i86kb")
+item = ExtResource("6_qmcys")
 metadata/_custom_type_script = "uid://cgmqv1bern5k7"
 
 [sub_resource type="Resource" id="Resource_via3y"]
 script = ExtResource("2_i86kb")
+item = ExtResource("7_qbjqa")
 metadata/_custom_type_script = "uid://cgmqv1bern5k7"
 
 [sub_resource type="Resource" id="Resource_8nyw4"]
 script = ExtResource("2_i86kb")
-item = ExtResource("4_gbjkg")
+item = ExtResource("8_qmcys")
 metadata/_custom_type_script = "uid://cgmqv1bern5k7"
 
 [sub_resource type="Resource" id="Resource_qmcys"]
 script = ExtResource("2_i86kb")
+item = ExtResource("8_prgbk")
 metadata/_custom_type_script = "uid://cgmqv1bern5k7"
 
 [sub_resource type="Resource" id="Resource_qbjqa"]
 script = ExtResource("2_i86kb")
+item = ExtResource("9_wkxil")
 metadata/_custom_type_script = "uid://cgmqv1bern5k7"
 
 [sub_resource type="Resource" id="Resource_prgbk"]
 script = ExtResource("2_i86kb")
+item = ExtResource("10_vntvb")
 metadata/_custom_type_script = "uid://cgmqv1bern5k7"
 
 [sub_resource type="Resource" id="Resource_wkxil"]
 script = ExtResource("2_i86kb")
+item = ExtResource("11_sxg3y")
 metadata/_custom_type_script = "uid://cgmqv1bern5k7"
 
 [sub_resource type="Resource" id="Resource_vntvb"]

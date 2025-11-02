@@ -1,16 +1,2 @@
-res://Inventory/inventory.gd
-res://Inventory/inventory_item.gd
-res://scripts/endless_battle.gd
-res://scripts/global.gd
-res://scripts/lam_ang.gd
 res://scenes/EndlessBattle/EndlessBattle.tscn
 res://Inventory/Item/playerInventory.tres
-res://Inventory/Artifacts/bato-ng-palos.tres
-res://Inventory/Artifacts/salakot-ng-lakay.tres
-res://Inventory/Artifacts/anting-anting.tres
-res://Inventory/Artifacts/mutya-ng-alon.tres
-res://Inventory/Artifacts/mutya-ng-ibon.tres
-res://Inventory/Artifacts/mutya-ng-saging.tres
-res://Inventory/Artifacts/mutya-ng-wasay.tres
-res://Inventory/Artifacts/mutya-ng-buaya.tres
-res://Inventory/Artifacts/panyo-ng-alitaptap.tres
