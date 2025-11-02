@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const WALK = 35.0
+
 const SPRINT = 65.0
 const DASH_SPEED = 600
 
@@ -35,6 +35,15 @@ var currentSpeed = 0
 var dashDirection = Vector2.ZERO
 var passiveCost = 5.0
 
+# player stats
+var strengthBuff: float = 0.0
+var healthBuff: float = 0.0
+var speedBuff: float = 0.0
+var energyBuff: float = 0.0
+var defBuff: float = 0.0
+var critDamageBuff: float = 0.0
+var critChanceBuff: float = 0.0
+
 var playerPos = Vector2.ZERO
 
 @onready var anim = $AnimatedSprite2D
@@ -50,6 +59,9 @@ var playerPos = Vector2.ZERO
 @onready var xpBar = $XPBar
 @onready var attackArea = $AttackArea
 @onready var coinLabel = $CoinLabel
+@onready var defLabel = $DefLabel
+@onready var attackLabel = $AttackLabel
+@onready var speedLabel = $SpeedLabel
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
 @onready var inventoryGui = $InventoryGui
 
@@ -72,6 +84,7 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	cameraMovement()
+	playerStats()
 	regenPlayerHealth(delta)
 	regenPlayerEnergy(delta)
 	
@@ -87,6 +100,29 @@ func _physics_process(delta: float) -> void:
 	handle_movement(delta)
 	attack()
 	
+func playerStats():
+	strengthBuff = Global.playerStrength + Global.strengthBuff
+	healthBuff = Global.MAX_HEALTH + Global.healthBuff
+	speedBuff = Global.playerSpeed + Global.speedBuff
+	energyBuff = Global.MAX_ENERGY + Global.energyBuff
+	defBuff = Global.defBuff
+	critDamageBuff = Global.critDamageBuff
+	critChanceBuff = Global.critChanceBuff
+	
+	healthBar.max_value = healthBuff
+	energyBar.max_value = energyBuff
+	defLabel.text = "DEF: " + str(defBuff)
+	attackLabel.text = "ATK: " + str(strengthBuff)
+	speedLabel.text = "SPD: " + str(speedBuff)
+	
+	print("strength", strengthBuff)
+	print("health", healthBuff)
+	print("speed", speedBuff)
+	print("energy", energyBuff)
+	print("def", defBuff)
+	print("critchn", critDamageBuff)
+	print("critdmg", critDamageBuff)
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_inventory"):
 		if inventoryGui.isOpen:
@@ -106,15 +142,15 @@ func cameraMovement():
 	global_position.y = clamp(global_position.y, Global.mapBounds.position.x, Global.mapBounds.position.y + Global.mapBounds.size.y)
 	
 func regenPlayerHealth(delta) -> void:
-	if isRegeningHP and Global.playerHealth < Global.MAX_HEALTH:
+	if isRegeningHP and Global.playerHealth < healthBuff:
 		Global.playerHealth += REGEN_RATE_HP * delta
-		Global.playerHealth = clamp(Global.playerHealth, 0, Global.MAX_HEALTH)
+		Global.playerHealth = clamp(Global.playerHealth, 0, healthBuff)
 		healthBar.value = Global.playerHealth
 
 func regenPlayerEnergy(delta) -> void:
-	if isRegeningEnergy and Global.playerEnergy < Global.MAX_ENERGY:
+	if isRegeningEnergy and Global.playerEnergy < energyBuff:
 		Global.playerEnergy += REGEN_RATE_ENERGY * delta
-		Global.playerEnergy = clamp(Global.playerEnergy, 0, Global.MAX_ENERGY)
+		Global.playerEnergy = clamp(Global.playerEnergy, 0, energyBuff)
 		energyBar.value = Global.playerEnergy
 	if isDashing or isSprinting or isAttacking:
 		isRegeningEnergy = false
@@ -147,8 +183,7 @@ func handle_movement(delta):
 	if isHurt:
 		return
 	if canMove:
-		currentSpeed = WALK + Global.speedBuff
-		
+		currentSpeed = speedBuff
 	
 	if isDashing:
 		velocity = dashDirection * DASH_SPEED
@@ -158,16 +193,16 @@ func handle_movement(delta):
 			if doubleTapTimers[dir] > 0:
 				doubleTapTimers[dir] -= delta
 				
-		if Input.is_action_pressed("ui_select"):
-			#print(Global.playerEnergy, ENERGY_DECAY_RATE_SPRINT)
-			if Global.playerEnergy >= ENERGY_DECAY_RATE_SPRINT:
-				isRegeningEnergy = false
-				isSprinting = true
-				Global.playerEnergy -= ENERGY_DECAY_RATE_SPRINT * delta
-				Global.playerEnergy = clamp(Global.playerEnergy, 0, Global.MAX_ENERGY)
-				energyBar.value = Global.playerEnergy
-				energyRegenTimer.start()
-				currentSpeed = SPRINT + Global.addSpeed
+		#if Input.is_action_pressed("ui_select"):
+			##print(Global.playerEnergy, ENERGY_DECAY_RATE_SPRINT)
+			#if Global.playerEnergy >= ENERGY_DECAY_RATE_SPRINT:
+				#isRegeningEnergy = false
+				#isSprinting = true
+				#Global.playerEnergy -= ENERGY_DECAY_RATE_SPRINT * delta
+				#Global.playerEnergy = clamp(Global.playerEnergy, 0, energyBuff)
+				#energyBar.value = Global.playerEnergy
+				#energyRegenTimer.start()
+				#currentSpeed = SPRINT
 			
 		# movements directions
 		if Input.is_action_pressed("ui_right"):
@@ -260,7 +295,7 @@ func attack():
 		# this function only work once... better not remove it
 		for body in attackArea.get_overlapping_bodies():
 			if Global.playerCurrentAttack and body.has_method("deal_dmg"):
-				body.deal_dmg(Global.playerDamage)
+				body.deal_dmg(strengthBuff)
 			
 		# handle the attack animations
 		if abs(dir.x) > abs(dir.y):
@@ -293,7 +328,7 @@ func player():
 func take_damage(damage: int):
 	if isPlayerAlive and not isHurt:
 		Global.playerHealth -= damage
-		Global.playerHealth = clamp(Global.playerHealth, 0, Global.MAX_HEALTH)
+		Global.playerHealth = clamp(Global.playerHealth, 0, healthBuff)
 		healthBar.value = Global.playerHealth
 		isRegeningHP = false
 		regenTimer.start()  # Reset health regen timer
@@ -344,7 +379,7 @@ func _on_sprint_energy_decay_timeout() -> void:
 
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	if Global.playerCurrentAttack and body.has_method("deal_dmg"):
-		body.deal_dmg(Global.playerDamage)
+		body.deal_dmg(strengthBuff)
 
 func _on_exit_to_scene_2_2_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.

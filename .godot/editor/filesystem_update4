@@ -1,1 +1,6 @@
+res://scenes/EndlessBattle/EndlessBattle.tscn
 res://Inventory/Item/playerInventory.tres
+res://scripts/global.gd
+res://scripts/lam_ang.gd
+res://Inventory/Artifacts/bato-ng-palos.tres
+res://scenes/Player/lam_ang.tscn
