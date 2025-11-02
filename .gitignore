@@ -1,0 +1,1 @@
+-e "\n# Godot auto-generated files\n.godot/\n.import/\n.export/\n*.import\n*.md5\n*.ctex\n*.res\n*.cfg\n*.tres" 
