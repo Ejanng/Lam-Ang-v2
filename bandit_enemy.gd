@@ -142,7 +142,7 @@ func deal_dmg(damage):
 func die():
 	DropManager.drop_xp(global_position, xpDrop, xpDropChance)
 	DropManager.drop_coin(global_position, coinDrop, coinDropChance)
-	remove_from_group("dark_forest_enemies")  # Important!
+	remove_from_group("bandit_enemies")  # Important!
 	var roll = randi_range(1, 2)
 	print(roll)
 	match roll:

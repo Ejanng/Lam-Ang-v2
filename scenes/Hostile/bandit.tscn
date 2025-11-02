@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://c0qa11n476yee"]
 
-[ext_resource type="Script" uid="uid://buwasdtb3dsvk" path="res://scripts/melee_enemy.gd" id="1_kjp57"]
+[ext_resource type="Script" uid="uid://dwyoauo8mumba" path="res://bandit_enemy.gd" id="1_kjp57"]
 [ext_resource type="Texture2D" uid="uid://bf2r4yqoq5sfr" path="res://assets/Sprites/Lam-ang/lam-ang idle spritesheet.png" id="2_mm5uw"]
 [ext_resource type="Texture2D" uid="uid://dn7ncb1xcmhoj" path="res://assets/Sprites/Lam-ang/lam-ang side walk spritesheet.png" id="3_pnho2"]
 

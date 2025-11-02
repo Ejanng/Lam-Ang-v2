@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const WALK = 100
-const SPRINT = 15
+const WALK = 500
+const SPRINT = 1000
 const DASH_SPEED = 600
 
 const REGEN_RATE_ENERGY = 10.0

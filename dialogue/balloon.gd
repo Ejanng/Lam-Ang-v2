@@ -41,7 +41,6 @@ var mutation_cooldown: Timer = Timer.new()
 
 ## The base balloon anchor
 @onready var balloon: Control = %Balloon
-
 @onready var portrait: TextureRect = %Portrait
 
 ## The label showing the name of the currently speaking character
@@ -53,6 +52,7 @@ var mutation_cooldown: Timer = Timer.new()
 ## The menu of responses
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
+@onready var scene1_dialogue: DialogueResource = preload("res://dialogue/Scene1.dialogue")
 
 func _ready() -> void:
 	balloon.hide()
@@ -99,6 +99,11 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
+	var portrait_path: String = "res://characters/%s/portrait.png" % dialogue_line.character
+	if ResourceLoader.exists(portrait_path):
+		portrait.texture = load (portrait_path)
+	else:
+		portrait.texture = null
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line

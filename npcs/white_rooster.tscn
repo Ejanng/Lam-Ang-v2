@@ -1,37 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwaingb1o5dik"]
+[gd_scene load_steps=6 format=3 uid="uid://dwaingb1o5dik"]
 
-[ext_resource type="Texture2D" uid="uid://bf2r4yqoq5sfr" path="res://assets/Sprites/Lam-ang/lam-ang idle spritesheet.png" id="1_tmpn8"]
+[ext_resource type="Texture2D" uid="uid://bu3pak11vcqi5" path="res://assets/Sprites/OS and  BERKAKAN/Lam-angs WHITE ROOSTER (1).png" id="1_tmpn8"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uv2tn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pc45"]
 atlas = ExtResource("1_tmpn8")
-region = Rect2(1, 1, 30, 30)
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i05vm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_skv37"]
 atlas = ExtResource("1_tmpn8")
-region = Rect2(33, 33, 30, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cgviw"]
-atlas = ExtResource("1_tmpn8")
-region = Rect2(1, 33, 30, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jrcdj"]
-atlas = ExtResource("1_tmpn8")
-region = Rect2(33, 1, 30, 30)
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rebq2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uv2tn")
+"texture": SubResource("AtlasTexture_7pc45")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i05vm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cgviw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jrcdj")
+"texture": SubResource("AtlasTexture_skv37")
 }],
 "loop": true,
 "name": &"idle_down",
@@ -50,7 +36,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_rebq2")
 animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 0.54473984
+frame_progress = 0.20198016
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_e4t8w")
