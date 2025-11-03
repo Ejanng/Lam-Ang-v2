@@ -1,37 +1,37 @@
 [gd_scene load_steps=8 format=3 uid="uid://b55l81r2al4oi"]
 
-[ext_resource type="Texture2D" uid="uid://bf2r4yqoq5sfr" path="res://assets/Sprites/Lam-ang/lam-ang idle spritesheet.png" id="1_0y6rs"]
+[ext_resource type="Texture2D" uid="uid://8lnbjsk77q6m" path="res://assets/Sprites/Igorot sprites/Igorot 2 NO WEAPON IDLE spritesheet (1).png" id="1_0y6rs"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uv2tn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xjuw"]
 atlas = ExtResource("1_0y6rs")
-region = Rect2(1, 1, 30, 30)
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i05vm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa6lo"]
 atlas = ExtResource("1_0y6rs")
-region = Rect2(33, 33, 30, 30)
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cgviw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquaq"]
 atlas = ExtResource("1_0y6rs")
-region = Rect2(1, 33, 30, 30)
+region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jrcdj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_etcyj"]
 atlas = ExtResource("1_0y6rs")
-region = Rect2(33, 1, 30, 30)
+region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rebq2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uv2tn")
+"texture": SubResource("AtlasTexture_2xjuw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i05vm")
+"texture": SubResource("AtlasTexture_sa6lo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cgviw")
+"texture": SubResource("AtlasTexture_lquaq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jrcdj")
+"texture": SubResource("AtlasTexture_etcyj")
 }],
 "loop": true,
 "name": &"idle_down",
@@ -50,7 +50,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_rebq2")
 animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 0.54473984
+frame_progress = 0.61274594
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_e4t8w")

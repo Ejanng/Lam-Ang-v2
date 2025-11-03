@@ -1,6 +1,11 @@
-res://scenes/EndlessBattle/EndlessBattle.tscn
-res://Inventory/Item/playerInventory.tres
-res://scripts/global.gd
 res://scripts/lam_ang.gd
-res://Inventory/Artifacts/bato-ng-palos.tres
-res://scenes/Player/lam_ang.tscn
+res://scenes/MainStory/Town.tscn
+res://Inventory/Artifacts/playerArtifacts.tres
+res://Inventory/Item/playerInventory.tres
+res://ui components/1theme.tres
+res://ui components/2theme.tres
+res://ui components/3theme.tres
+res://ui components/4theme.tres
+res://ui components/5theme.tres
+res://bandit_enemy.gd
+res://npcs/BERKAKAN.tscn

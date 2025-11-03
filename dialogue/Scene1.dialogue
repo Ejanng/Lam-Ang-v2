@@ -6,12 +6,9 @@ Namongan: Must you go, Don Juan? I fear for you... and our child grows within me
 
 Don Juan: The Igorots have raided our lands for the last time. I must bring peace to Nalbuan, my love. I will return before our child is born.
 
-Namongan: Then take this with you
-
-- Claim Anting-anting
-	Namongan: May it protect you in the mountains.
-
 Don Juan: I will return. I promise
+
+SYSTEM: Press 'WASD' to move.
 
 SYSTEM: Follow the path to Kaigorotan.
 
@@ -63,21 +60,13 @@ Namongan: He went to Kaigorotan... and never returned.
 
 Lam-ang: Then I will find him. And I will avenge him.
 
-# Can be modified if may time
-SYSTEM: Lam-ang picks up kampilan sword
-# ---------------------------
+SYSTEM: Lam-ang receives kampilan sword.
 
 Namongan: When you asked for your father as a newborn, I knew this day would come. You carry his spirit, Lam-ang.
 
-Lam-ang: I carry the mutya stones. I carry father's courage. The Igorots will answer for what they've done.
-
-SYSTEM: Lam-ang equips two mutya stones, boosting his stats.
-
 Namongan: Then go, my son. But please... return to me. You're all I have left.
 
-SYSTEM: Go to the east leading to the dark forest.
-
-# SYSTEM: You are now Lam-ang. Press ESC to view Controls.
+SYSTEM: Head to the east leading to the dark forest.
 
 => END 
 
@@ -89,11 +78,11 @@ Igorot Scout: Who dares enter Igorotan territory?
 
 Lam-ang: I am Lam-ang, son of Don Juan! I've come for the ones who killed my father!
 
-Igorot Scout: Don Juan? (laughs) His head decorates our chief's spear! You'll join him!
+Igorot Scout: Don Juan? His head decorates our chief's spear! You'll join him!
 
 Lam-ang: You'll regret those words.
 
-SYSTEM: Combat Started. Defeat all enemies to proceed. (3 waves)
+SYSTEM: Combat Started. Defeat all enemies to proceed.
 
 => END 
 

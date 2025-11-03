@@ -1,37 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://ex00a1v3tgg2"]
+[gd_scene load_steps=6 format=3 uid="uid://ex00a1v3tgg2"]
 
-[ext_resource type="Texture2D" uid="uid://bf2r4yqoq5sfr" path="res://assets/Sprites/Lam-ang/lam-ang idle spritesheet.png" id="1_shybo"]
+[ext_resource type="Texture2D" uid="uid://cbsfuu56wevyh" path="res://assets/Sprites/OS and  BERKAKAN/Lam-angs DOG.png" id="1_shybo"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uv2tn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyh35"]
 atlas = ExtResource("1_shybo")
-region = Rect2(1, 1, 30, 30)
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i05vm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q57ai"]
 atlas = ExtResource("1_shybo")
-region = Rect2(33, 33, 30, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cgviw"]
-atlas = ExtResource("1_shybo")
-region = Rect2(1, 33, 30, 30)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jrcdj"]
-atlas = ExtResource("1_shybo")
-region = Rect2(33, 1, 30, 30)
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rebq2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uv2tn")
+"texture": SubResource("AtlasTexture_lyh35")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i05vm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cgviw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jrcdj")
+"texture": SubResource("AtlasTexture_q57ai")
 }],
 "loop": true,
 "name": &"idle_down",

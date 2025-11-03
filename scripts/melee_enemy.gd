@@ -96,7 +96,7 @@ func perform_attack():
 	if player and is_instance_valid(player) and isPlayerInAttackRange:
 		if roll <= hitChance:
 			if player.has_method("take_damage"):
-				player.take_damage(enemyDMG - Global.defBuff)
+				player.take_damage(enemyDMG - Global.addDef)
 				#print("Enemy dealt ", enemyDMG - Global.addDef, " damage to player!")
 		else:
 			print("Enemy missed the attack")
@@ -142,7 +142,7 @@ func deal_dmg(damage):
 func die():
 	DropManager.drop_xp(global_position, xpDrop, xpDropChance)
 	DropManager.drop_coin(global_position, coinDrop, coinDropChance)
-	
+	remove_from_group("dark_forest_enemies")  # Important!
 	var roll = randi_range(1, 2)
 	print(roll)
 	match roll:

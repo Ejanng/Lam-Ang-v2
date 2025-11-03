@@ -9,11 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://bg8igj13o1og6" path="res://dialogue/actionable.tscn" id="8_23kjh"]
 [ext_resource type="PackedScene" uid="uid://di6ytm5suocus" path="res://npcs/namongan.tscn" id="8_om1g8"]
 [ext_resource type="Resource" uid="uid://k0ajtmpkft7" path="res://dialogue/Scene1.dialogue" id="9_5bpsw"]
-[ext_resource type="AudioStream" uid="uid://im718yqqxa6p" path="res://audio/Music/travels_bgm story mode.wav" id="9_5ry8j"]
+[ext_resource type="AudioStream" uid="uid://sf4g3cgq0q2g" path="res://audio/Music/final farewell ni namongan ken daddy lam-ang.wav" id="9_nx203"]
 [ext_resource type="PackedScene" uid="uid://d4b118rrwlhqi" path="res://npcs/wounded_villager.tscn" id="10_2jkmf"]
 [ext_resource type="PackedScene" uid="uid://bcxda6gun7nus" path="res://scenes/Hostile/melee_tribe_member.tscn" id="11_7luj0"]
 [ext_resource type="Script" uid="uid://0u4j6axkj70u" path="res://scripts/final_music.gd" id="13_jc6eg"]
-[ext_resource type="AudioStream" uid="uid://bvvv03mhlys0h" path="res://audio/Music/dad_battle.wav" id="14_5ry8j"]
+[ext_resource type="AudioStream" uid="uid://bvvv03mhlys0h" path="res://audio/Music/dad battle, tutorial.wav" id="14_5ry8j"]
 
 [sub_resource type="GDScript" id="GDScript_5bpsw"]
 
@@ -1722,13 +1722,12 @@ auto_trigger = true
 shape = SubResource("CapsuleShape2D_2jkmf")
 
 [node name="firstMusic" type="AudioStreamPlayer" parent="Namongan"]
-stream = ExtResource("9_5ry8j")
+stream = ExtResource("9_nx203")
 autoplay = true
 
 [node name="Lam-Ang" parent="." instance=ExtResource("7_5ry8j")]
 position = Vector2(598, 324)
 collision_layer = 19
-inventory = null
 
 [node name="Camera2D2" type="Camera2D" parent="Lam-Ang"]
 zoom = Vector2(2, 2)
@@ -1809,6 +1808,3 @@ stream = ExtResource("14_5ry8j")
 autoplay = true
 
 [node name="Node" type="Node" parent="."]
-
-[node name="battleMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_5ry8j")
