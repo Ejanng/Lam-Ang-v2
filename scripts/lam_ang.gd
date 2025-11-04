@@ -115,13 +115,13 @@ func playerStats():
 	attackLabel.text = "ATK: " + str(strengthBuff)
 	speedLabel.text = "SPD: " + str(speedBuff)
 	
-	print("strength", strengthBuff)
-	print("health", healthBuff)
-	print("speed", speedBuff)
-	print("energy", energyBuff)
-	print("def", defBuff)
-	print("critchn", critDamageBuff)
-	print("critdmg", critDamageBuff)
+	#print("strength", strengthBuff)
+	#print("health", healthBuff)
+	#print("speed", speedBuff)
+	#print("energy", energyBuff)
+	#print("def", defBuff)
+	#print("critchn", critDamageBuff)
+	#print("critdmg", critDamageBuff)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_inventory"):

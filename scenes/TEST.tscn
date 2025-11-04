@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d8nihf27qqq1"]
+
+[ext_resource type="PackedScene" uid="uid://dpxhekdoyxvc0" path="res://scenes/MainStory/Enemy/enemy.tscn" id="1_dywss"]
+[ext_resource type="PackedScene" uid="uid://cggscjapu5aer" path="res://scenes/MainStory/Player/Player.tscn" id="2_gtx70"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Enemy" parent="." instance=ExtResource("1_dywss")]
+collision_layer = 3
+
+[node name="Player" parent="." instance=ExtResource("2_gtx70")]
+position = Vector2(168, 0)
+
+[node name="Camera2D2" type="Camera2D" parent="."]
